@@ -4,15 +4,16 @@ This repository contains a R script to import Excel-versions of the [Police reco
 
 ## Instructions
 
-The following instructions are only general ones &mdash; you may want to look at the comments in the code in more detail when you get to Step 6, and modify the code accordingly instead.
+The following instructions are only general ones &mdash; you may want to look at the comments in the code in more detail when you get to Step 7, and modify the code accordingly instead.
 
-1. Download each of the [Police recorded crime open data tables](https://www.gov.uk/government/statistics/police-recorded-crime-open-data-tables) at the Community Safety Partnership-level;
-2. Open each file in Excel, and save as either a `.xlsx` or `.xls` file;
-3. Create a new folder where you have saved the `.Rproj`, and `.R` file, labelled `01 Raw Data`;
-4. Move the files into the `01 Raw Data` folder;
-5. Open the [`PRC-Data-Wrangling.Rproj`](/PRC-Data-Wrangling.Rproj) file;
-6. Open the [`PRC-Data-Wrangling.R`](/PRC-Data-Wrangling.R) file; and 
-7. Source the file.
+1. Download the [`PRC-Data-Wrangling.Rproj`](/PRC-Data-Wrangling.Rproj), and [`PRC-Data-Wrangling.R`](/PRC-Data-Wrangling.R) files from this repository;
+2. Download each of the [Police recorded crime open data tables](https://www.gov.uk/government/statistics/police-recorded-crime-open-data-tables) at the Community Safety Partnership-level;
+3. Open each file in Excel, and save as either a `.xlsx` or `.xls` file;
+4. Create a new folder where you have saved the [`PRC-Data-Wrangling.Rproj`](/PRC-Data-Wrangling.Rproj), and [`PRC-Data-Wrangling.R`](/PRC-Data-Wrangling.R) file, labelled `01 Raw Data`;
+5. Move the files into the `01 Raw Data` folder;
+6. Open the [`PRC-Data-Wrangling.Rproj`](/PRC-Data-Wrangling.Rproj) file;
+7. Open the [`PRC-Data-Wrangling.R`](/PRC-Data-Wrangling.R) file; and 
+8. Source the file.
 
 ## Code requirements
 
