@@ -34,6 +34,72 @@ It is assumed that the raw datasets have the following columns names, in the fol
 8. `Offence Code`; and
 9. `Number of Offences`.
 
+### Unifying names
+
+There are some differences in spelling across the columns in the raw dataset. The R script is designed to resolve these differences, but the .csv files have **not** been included with this code for now.
+
+The R script loads various name unification `.csv` files help to unify the names using the following code:
+
+```r
+list.uni <- lapply(file.path(dir.raw, kUniFileNames),
+                   function (x) {
+                     as.data.table(read.csv(x))
+                   })
+```
+
+The names are then unified using near-identical code blocks; here's an example for the `Force Name` column:
+
+```r
+setkey(data.raw, "Force.Name")
+setkey(list.uni$Force, "Force.Name")
+data.raw[list.uni$Force, Force.Name := Unified.Force]
+```
+
+To use the R script without name unification, remove these two code blocks. To generate your own name unification `.csv` files, follow these example steps for the `Force Name` column:
+
+1. Get all unique `Force Name`s from the entire raw dataset;
+2. Put the data under a column labelled `Force Name`;
+3. Create a second column labelled `Unified Force`;
+4. Manually assign the unified force for each unique force name;
+5. Save the file as a `.csv` file; and
+6. Enter the file name in this code block: `kUniForce <- "[file name].csv"`
+
+Repeat the above six steps to unify all the names, looking in the R script for the required code in Steps 3, and 6.
+
+### Merging CSP names
+
+In the raw dataset, several Community Safety Partnerships (CSPs) have, over time, been merged together. To ensure continuity, a separate column is generated in the dataset labelled `Mapped CSP`. The `.csv` file to determine these mapped CSPs has **not** been included with this code for now.
+
+The R script loads this `.csv` file using the following code block:
+
+```r
+data.mCSP <- read.csv(file = file.path(dir.raw, kMergedCSP))
+```
+
+The individual CSPs are then mapped using the following left-join code block:
+
+```r
+data.raw <- merge(data.raw, data.mCSP[, !(names(data.mCSP) %in% "Change")], 
+                  by = "CSP.Name",
+                  all.x = TRUE,
+                  sort = FALSE)
+```
+
+An AQA step follows to ensure the left-join has not resulted in any `NA` values:
+
+```r
+stopifnot(all(!is.na(data.raw$Mapped.CSP)))
+```
+
+To use the R script without mapping merged CSPs, remove these three code blocks. To generate your own mapping `.csv` file, follow these steps:
+
+1. Get all the `CSP Name`s from the dataset (ideally after [unifying names](/README.md#merging%20csp%20names);
+2. Put the data under a column labelled `CSP Name`;
+3. Create a second column labelled `Mapped CSP`;
+4. Manually assign the merged CSP name for each unique CSP name;
+5. Save the file as a `.csv` file; and
+6. Enter the file name in this code block: `kMergedCSP <- "[file name].csv"`
+
 ## Licence
 
 This code is supplied under the Apache License 2.0 licence.
