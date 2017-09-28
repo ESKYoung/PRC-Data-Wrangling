@@ -4,7 +4,7 @@ This repository contains a R script to import Excel-versions of the [Police reco
 
 ## Instructions
 
-The following instructions only general ones &mdash; you may want to look at the comments in more detail at Step 6, and modify it accordingly instead.
+The following instructions are only general ones &mdash; you may want to look at the comments in the code in more detail when you get to Step 6, and modify the code accordingly instead.
 
 1. Download each of the [Police recorded crime open data tables](https://www.gov.uk/government/statistics/police-recorded-crime-open-data-tables) at the Community Safety Partnership-level;
 2. Open each file in Excel, and save as either a `.xlsx` or `.xls` file;
