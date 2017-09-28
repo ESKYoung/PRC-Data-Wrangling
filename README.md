@@ -10,8 +10,8 @@ The following instructions only general ones &mdash; you may want to look at the
 2. Open each file in Excel, and save as either a `.xlsx` or `.xls` file;
 3. Create a new folder where you have saved the `.Rproj`, and `.R` file, labelled `01 Raw Data`;
 4. Move the files into the `01 Raw Data` folder;
-5. Open the `PRC-Data-Wrangling.Rproj` file;
-6. Open the `PRC Data Wrangling.R` file; and 
+5. Open the [`PRC-Data-Wrangling.Rproj`](/PRC-Data-Wrangling.Rproj) file;
+6. Open the [`PRC Data Wrangling.R`](/PRC Data Wrangling.R) file; and 
 7. Source the file.
 
 ## Code requirements
