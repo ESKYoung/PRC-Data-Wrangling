@@ -60,7 +60,7 @@ To use the R script without name unification, remove these two code blocks. To g
 1. Get all unique `Force Name`s from the entire raw dataset;
 2. Put the data under a column labelled `Force Name`;
 3. Create a second column labelled `Unified Force`;
-4. Manually assign the unified force for each unique force name;
+4. Manually assign the unified force for each unique force name in the `Unified Force` column;
 5. Save the file as a `.csv` file in the `01 Raw Data` folder; and
 6. Enter the file name in this code block: `kUniForce <- "[file name].csv"`
 
@@ -96,7 +96,7 @@ To use the R script without mapping merged CSPs, remove these three code blocks.
 1. Get all the `CSP Name`s from the dataset (ideally after [unifying names](/README.md#unifying-names));
 2. Put the data under a column labelled `CSP Name`;
 3. Create a second column labelled `Mapped CSP`;
-4. Manually assign the merged CSP name for each unique CSP name;
+4. Manually assign the merged CSP name for each unique CSP name in the `Mapped CSP` column;
 5. Save the file as a `.csv` file in the `01 Raw Data` folder; and
 6. Enter the file name in this code block: `kMergedCSP <- "[file name].csv"`
 
