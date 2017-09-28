@@ -1,6 +1,6 @@
 # PRC-Data-Wrangling
 
-This repository contains a R script to import Excel-versions of the [Police recorded crime open data tables](https://www.gov.uk/government/statistics/police-recorded-crime-open-data-tables). It aggregates this data at the offence subgroup-level, and outputs both the processed dataset.
+This repository contains a R script to import Excel-versions of the [Police recorded crime open data tables](https://www.gov.uk/government/statistics/police-recorded-crime-open-data-tables). It aggregates this data at the offence subgroup-level, and outputs both the combined raw, and processed datasets.
 
 ## Instructions
 
