@@ -93,7 +93,7 @@ stopifnot(all(!is.na(data.raw$Mapped.CSP)))
 
 To use the R script without mapping merged CSPs, remove these three code blocks. To generate your own mapping `.csv` file, follow these steps:
 
-1. Get all the `CSP Name`s from the dataset (ideally after [unifying names](/README.md#merging%20csp%20names);
+1. Get all the `CSP Name`s from the dataset (ideally after [unifying names](/README.md#unifying-names));
 2. Put the data under a column labelled `CSP Name`;
 3. Create a second column labelled `Mapped CSP`;
 4. Manually assign the merged CSP name for each unique CSP name;
